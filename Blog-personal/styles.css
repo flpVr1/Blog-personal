@@ -1,0 +1,581 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Estilos generales para la barra de Navegación y Footer */
+.div__nav {
+    text-align: right;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ul__nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ul__nav li {
+    margin-right: 20px;
+    display: inline;
+}
+
+.ul__nav a {
+    text-decoration: none;
+}
+
+.ul__nav a:hover {
+    border-bottom: 1px solid gold;
+    transition: 5s ease;
+}
+
+body {
+    position: relative;
+    padding-bottom: 9em;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: #313131;
+    padding: 2em 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    background-color: #313131;
+}
+
+p {
+    line-height: 2.5vh;
+}
+
+.go-top-container {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 1rem;
+    height: 1rem;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background-color: #2071b2;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button h1 {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #FFF;
+    transition: .2s;
+    background-color: #2071b2;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .3s ease-in-out;
+    width: 4rem;
+    height: 4rem;
+    z-index: 11;
+}
+
+.show h1 {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+    50% {
+        width: 5rem;
+        height: 5rem;
+    }
+    100% {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* Sección index.html */
+.header__index {
+    text-align: center;
+}
+
+.main__index h3,
+.main__index h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.section__index {
+    padding: 10px;
+    width: 45%;
+    margin: 0 auto;
+} 
+
+.section__index li {
+    padding: 5px;
+}
+
+/* Sección seguridad.html */
+.header__seguridad {
+    text-align: center;
+}
+
+.main__seguridad h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.div__container {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.div__container h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.div__title {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.div__title:hover {
+    border-bottom: 1px solid gold;
+    transition: 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: max-content; /* Establece la altura máxima deseada */
+        opacity: 1;
+    }
+}
+
+.div__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 5px;
+    text-align: justify;
+}
+
+.div__content ul {
+    margin-left: 10px;
+}
+
+.show-animation {
+    animation: slideDown 0.5s ease forwards;
+}
+
+.div__container-modelos {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.div__container-explicacion {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__vulnerabilidades {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.section__vulnerabilidades h2 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.first__p {
+    margin-top: 20px;
+}
+
+.ul__vulnerabilidades {
+    margin-left: 15px;
+}
+
+.section__listaPuertos {
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.section__listaPuertos h2 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.section__listaPuertos p {
+    text-align: justify;
+}
+
+.section__listaPuertos ul  {
+    margin-left: 15px;
+}
+
+/* Sección de programación.html */
+.header__programacion {
+    text-align: center;
+}
+
+.main__programacion h3 {
+    text-align: center;
+}
+
+/* Sección redes.html */
+.header__redes {
+    text-align: center;
+}
+
+.main__redes h3 {
+    text-align: center;
+}
+
+.section__container-direccionamientoIpv4 {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-direccionamientoIpv4 h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section__container-direccionamientoIpv4 p,
+.section__container-direccionamientoIpv4 h3 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.section__container-tablaIps {
+    margin: 0 auto;
+    width: 70%;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+th {
+    padding: 10px;
+} 
+
+.section__mascaraDeRed {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__mascaraDeRed h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__mascaraDeRed p,
+.section__mascaraDeRed h4 {
+    text-align: justify;
+}
+
+.section__container-divisionRedes {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-divisionRedes h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__container-divisionRedes p {
+    text-align: justify;
+}
+
+.tabla__divisionRedes {
+    width: 100%;
+}
+
+.tabla__divisionRedes td {
+    text-align: center;
+}
+
+/* Sección linux.html */
+.header__linux {
+    text-align: center;
+}
+
+.main__linux h3 {
+    text-align: center;
+}
+
+.div__container-tipos-shells {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.div__container-tipos-shells h1,
+.div__container-tipos-shells h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div__container-tipos-shells p {
+    text-align: justify;
+}
+
+.section__prompt {
+    margin-top: 20px;
+}
+
+.section__container-prompt {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-prompt li {
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.section__container-prompt h1 {
+    text-align: center;
+}
+
+.section__ficheros {
+    margin-top: 20px;
+}
+
+.section__container-ficheros h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__container-ficheros {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-ficheros li {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.section__directorios {
+    margin-top: 20px;
+}
+
+.section__container-directorios {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-directorios h1,
+.section__container-directorios h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.section__container-directorios li {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.ul__directorios {
+    margin-left: 30px;
+}
+
+.section__container-variables {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-variables h1,
+.section__container-variables h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.section__container-variables p {
+    text-align: justify;
+}
+
+.ul__comandos {
+    margin-left: 15px;
+}
+
+.ul__principal {
+    margin-left: 10px;
+}
+
+.section__container-rutasAbsolutas {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-rutasAbsolutas p {
+    text-align: justify;
+}
+
+.section__container-rutasAbsolutas h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.section__container-comandosNavegacion {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-comandosNavegacion h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__container-comandosNavegacion li {
+    text-align: justify;
+}
+
+.li__comandosNavegacion {
+    margin-left: 15px;
+}
+
+.section__container-comandosNavegacion h3 {
+    margin-bottom: 10px;
+}
+
+.section__container-gestionFicheros {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-gestionFicheros h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.section__container-gestionFicheros li {
+    text-align: justify;
+}
+
+.ul__section-container__gestionFicheros {
+    margin-left: 15px;
+}
+
+.section__container-gestionDirectorios {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-gestionDirectorios h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.section__container-gestionDirectorios p,
+.section__container-gestionDirectorios li {
+    text-align: justify;
+}
+
+.ul__section-container__gestionDirectorios {
+    margin-left: 15px;
+}
+
+.section__container-comandosVisualizacion {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.section__container-comandosVisualizacion h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__container-comandosVisualizacion p,
+.section__container-comandosVisualizacion li {
+    text-align: justify;
+}
+
+.section__container-sistemasPuts {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.section__container-sistemasPuts h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__container-sistemasPuts p {
+    text-align: justify;
+}
+
+.section__container-gestionUsuarios {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.section__container-gestionUsuarios h1 {
+    text-align: center;
+}
+
+.section__container-gestionUsuarios p,
+.section__container-gestionUsuarios li {
+    text-align: justify;
+}
+
+.ul__container-gestionUsuarios {
+    margin-left: 15px;
+}

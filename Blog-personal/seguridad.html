@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog</title>
+</head>
+<body>
+
+    <header class="header__seguridad">
+        <div class="div__seguridad">
+            <h1>Seguridad informática</h1>
+        </div>
+    </header>
+
+    <head>
+        <div class="div__nav">
+            <nav>
+                <ul class="ul__nav"> 
+
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="seguridad.html">Seguridad informática</a>
+                    </li>
+                    <li>
+                        <a href="programacion.html">Programación</a>
+                    </li>
+                    <li>
+                        <a href="redes.html">Redes</a>
+                    </li>
+                    <li>
+                        <a href="linux.html">Sistema Linux</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </head>
+    
+    <main class="main__seguridad">
+
+        <h3>Apuntes de Seguridad Informáctica</h3>
+
+        <div class="div__container-modelos">
+
+            <div class="div__container">
+                <h2 class="div__title">Modelo OSI</h2>
+                <div class="div__content">
+                    <p>- Modelo OSI: Open Systems Interconnections y no es una arquitectura de red ni una topología de red, es más bien un Standard independiente delos protocolos, es más detallado para ayudar u orientar a resolver problemas</p>
+                    <p>- El modelo OSI está dividido en 7 capas para poder entenderlo mejor. Dichas capas son las siguientes:</p>
+                    <ul>
+                        <li>Capa 1: Física</li>
+                        <li>Capa 2: Enlace de Datos (La cual se subdivide en 2 capas):</li>
+                        <ul>
+                            <li>Subcapa 1:</li>
+                            <li>Subcapa 2:</li>
+                        </ul>
+                        <li>Capa 3: La Red</li>
+                        <li>Capa 4: De Transporte</li>
+                        <li>Capa 5: Sesión</li>
+                        <li>Capa 6: De Presentación</li>
+                        <li>Capa 7: De Aplicación</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="div__container">
+                <h2 class="div__title">Modelo TCP/IP</h2>
+                <div class="div__content">
+                    <p>Modelo TCP/IP: Transmission Control Protocol/Internet Protocol es un protocolo de enlace de datos que se usa en internet para que los ordenadores y otros dispositivos envíen y reciban datos</p>
+                    <p>El Modelo TCP/IP está dividido en 4 capas para poder entenderlo mejor, y dichas capas son las siguientes:</p>
+                    <ul>
+                        <li>Capa 1: Acceso a la red</li>
+                        <li>Capa 2: De Internet</li>
+                        <li>Capa 3: De Transporte</li>
+                        <li>Capa 4: De Aplicaciones</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="div__container-explicacion">
+
+            <div class="div__container">
+                <h2 class="div__title">Capas Modelo OSI</h2>
+                <div class="div__content">
+                    <ul>
+                        <li>Capa 1: Física: Es la más sencilla de todas ya que abarca todo lo que conlleva a la conexión física en sí, por ejemplo: Cables, Cables de datos de cobre (cualquiera sea su categoría), Cables de fibra, sus conectores, sus terminaciones, etc. Abarca todo lo que sea interconexión de los sistemas que estén conectados a la red</li>
+                        <ul>
+                            <li>Sus incidencias pueden ser: Mala conexión a la toma de datos en ambos extremos</li>
+                        </ul><br/>
+                        <li>Capa 2: Enlace de datos: Algunos ejemplos son; Computadores, sus switches, los breach y dispositivos puentes. El standard <b>802.3</b> con las especificaciones de red y el <b>802.11</b>, el standard para el WiFi quedan dentro de esta capa porque definen los enlaces de datos alámbricos e inalámbricos, esta capa es la que produce la transferencia de datos entre 2 sistemas directamente o entre ambos sistemas a través de una red. Puede ser tanto por fibra, cobre, ondas de radio, etc. Dentro de esta capa se encuentran 2 subcapas a destacar:</li>
+                        <ul>
+                            <li>Subcapa 1: Se denomina con las siglas LLC (Logical Link Control) o Control de Enlace Lógico, su función es convertir la electricidad, la luz, o la señal WiFi en unos(1) y ceros(0)</li>
+                            <li>Subcapa 2: Se denomina con las siglas MAC(Media Access Control) o Control de Enlace al Medio. Esta capa se encarga de mover los paquetes de datos de unos(1) y ceros(0) desde una tarjeta o interfaz de red de una PC o sistema, hasta otra interfaz de red de otro sistema</li>
+                            <li>En cuanto a incidencias, esta capa aparte de asegurarse que lleguen los datos, también corrigen errores, siempre que pueda producidos por la capa física, por interferencia de radiofrecuencias por una baja SMR(que es un ratio entre la señal y el radio existente en ella), por interferencias en los canales, etc</li>
+                        </ul><br/>
+                        <li>Capa 3: La Red: Aquí hay ejemplos como; el enrutamiento , llevada a cabo por los routers como principal ejemplo o switches de capa 3 o L3, hay diversos protocolos dentro de esta capa y algunos son:</li><br/>
+                        <ul>
+                            <li>OSPF: Sirve para determinar la ruta más rápida que deben seguir los datos dentro de una red para alcanzar su destino. Es como una aplicación de GPS</li>
+                            <li>
+                                ID: Funcionan o forman parte de esta capa, paquetes de datos que pasan por unos ciertos enrutadores identificados en los extremos con las direcciones IP. Si se desea enviar datos desde un sistema ubicado por ejemplo en París a otro ubicado en Tokio, estos datos irán por una ruta en concreto, esta capa se encarga de enrutar los datos.
+                            </li>
+                            <ul>
+                                <li>Una incidencia en esta capa sería que los datos demoran mucho en enviarse, los nodos no están enrutados devidamente o que se defina una tabla de enrutamiento personalizada que evite que un sistema pueda conectarse con otro recurso adecuadamente </li>
+                            </ul>
+                            <li>IPSec: El Cifrado <b>IPSec</b> es una función de software que codifica los datos para proteger su contenido frente a partes no autorizadas. Los datos se cifran mediante una clave de cifrado y se necesita una clave de descifrado para mostrar o acceder a la información</li>
+                            <li>NAT: Network Address Translation es un proceso de traducción de direcciones IP y puerto cuando el paquete pasa a través de un router o firework. El nacimiento de NAT ayudó a controlar el agotamiento de las direcciones <b>IPv4</b>, además de agregar un componente de seguridad al no exponer las direcciones IP privadas de los usuarios. Existen 3 tipos de NAT:</li><br/>
+                            <ul>
+                                <li>NAT Estático: traduce una dirección IP privada a una pública. La dirección IP pública siempre es la misma.</li>
+                                <li>NAT Dinámico: Se mapean las direcciones IP privadas al pool de direcciones públicas. La IP pública puede variar.</li>
+                                <li>Port Address Translation(PAT): Se usa una sola dirección IP pública para todos los dispositivos externos, pero se asigna un puerto distinto a cada dirección privada. También se conoce como NAT Overload.</li>
+                            </ul><br/>
+                        </ul>
+                        <li>Capa 4: De Transporte: Algunos ejemplos de esta capa son los protocolos <b>TCP</b> y <b>UDP</b>, es decir protocolos que controlan la transmisión de datos, en esta capa se coordina todo el tránsito o intercambio de datos en cuanto a qué velocidad se materializará la comunicación, cuántos datos se enviarán, cual es el destino, puertos que se van a emplear.</li>
+                        <ul>
+                            <li>Un ejemplo de incidencia más común es que los paquetes de datos no alcancen su destino porque los puertos por donde debiesen entrar los datos no estén abiertos</li>
+                        </ul><br/>
+                        <li>Capa 5: Sesión: algunos de los ejemplos para esta capa pueden ser los protocolos:</li>
+                        <ul><br/>
+                            <li>NetBios: Sistema de Entrada/Salida básica de red, es un protocolo standard de <b>IBM</b> que permite que las aplicaciones sobre diferentes computadoras se comuniquen dentro de una red de área local(LAN)</li>
+                            <li>RPC: Remote Procedure Call o Llamada a Procedimiento Remoto, es un programa que utiliza una computadora para ejecutar código en otra máquina remota sin tener que preocuparse por las comunicaciones entre ambas, de forma que parezca que se ejecuta en local</li>
+                            <li>PPTP: Point to Point Tunneling Protocol o Protocolo de Tunelización Punto a Punto, es un protocolo de comunicación que permite inplementar redes privadas virtuales o <b>VPN</b>, opera en el puerto <b>TCP 1723</b> y es uno de los protocolos más antiguos y vulnerables hasta la fecha </li>
+                            <li>PAP: Password Authentication Protocol o Protocolo de Autenticación de Contraseña. Proporciona un método simple para que un nodo remoto establezca su identidad mediante un enlace bidireccional. No es interactivo. Esto quiere decir que la autenticación se hace mediante un usuario y una contraseña, si ambos coinciden con la base de datos local, se establece la conexión, de los contrario es denegada</li>
+                            <li>Una incidencia por destacar es cuando no se resuelven correctamente los nombres del NetBios</li><br/>
+                        </ul>
+                        <li>Capa 6: De Presentación: Un buen ejemplo puede ser la materialización del encriptado(cifrado y el correspondiente descrifrado de datos), esta capa es la que se encarga de presentar los datos que proceden de las capas anteriores inferiores para que estos tengan cierto formato y sean visibles por nosotros en la capa siguiente(Capa 7), es decir, los datos que se han trasladado por la red en un orden, con una configuración y formato correcto dentro de la red a través de una sesión, deben ser presentados adecuadamente a un formato idóneo para la aplicación en la que se mostrará</li>
+                        <ul>
+                            <li>Las incidencias más comunes pueden venir por algún inconveniente surgido en el proceso de cifrado o descifrado o la imposibilidad de realizarlo</li>
+                        </ul><br/>
+                        <li>Capa 7: De Aplicación: Algunos ejemplos de esta capa se encuentran en los protocolos:</li>
+                        <ul>
+                            <li>HTTPs: El HyperText Transfer Protocol Secure o el Protocolo de Transferencia de HiperTexto Seguro es la versión segura de <b>HTTP</b>, que es el principal protocolo utilizado para enviar datos entre un navegador web y un sitio web, HTTPs está encriptado para aumentar la seguridad en la transferencia de datos.</li>
+                            <li>DNS: Domain Name System o Sistema de Nombres de Dominio traduce los nombres de dominios aptos para lectura humana(por ejemplo www.google.cl) a direcciones IP aptas para lecturas por parte de máquinas(por ejemplo 192.0.2.44).</li>
+                            <li>FTP: File Transfer Protocol o Protocolo de Transferencia de Ficheros es un protocolo que se utiliza para transferir todo tipo de archivos entre equipos conectados a una red, por ejemplo: Internet.</li>
+                            <li>SMTP: Simple Mail Transfer Protocol o Protocolo de Transferencia de Correo Simple es una computadora o software que administra los mensajes del correo electrónico saliente. En general, un servidor de correo se refiere a un sistema que recopila, administra y envía correos electrónicos.</li>
+                            <li>Básicamente esta capa se encarga de la comunicación entre la aplicación que se ve en pantallas y la red, las aplicaciones de red que se usan están en esta capa porque utilizan dichos protocolos, estas aplicaciones serían los navegadores web(Firefox, Chrome, Brave, etc.). Aplicaciones que hacen uso de la red como Microsoft Teams, Outlook, WhatsApp, etc.</li>
+                        </ul><br/>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="div__container">
+                <h2 class="div__title">Capas Modelo TCP/IP</h2>
+                <div class="div__content">
+                    <ul>
+                        <li>Capa 1: Enlace de Datos: La capa de enlace de datos define cómo deben enviarse los datos, maneja el acto físico de enviar y recibir datos y es responsable de transmitir datos entre las aplicaciones o los dispositivos de una red. Esto incluye definir cómo el hardware y otros dispositivos de transmisión deben señalizar los datos de una red, tal como el controlador de un dispositivo de computadora, cable de Ethernet, una tarjeta de interfaz de red(network interface card, NIC) o una red inalámbrica. Se le conoce también como la capa de enlace, capa de acceso de red, capa de interfaz de red o capa física, y es la combinación de las capas de enlace físico y de datos del modelo de Interconexión de Sistemas Abiertos(OSI), que estandariza las funciones de comunicaciones en los sistemas informáticos y de telecomunicaciones</li><br/>
+                        <li>Capa 2: De Internet: La capa de internet es responsable de enviar paquetes desde una red y controlar su movimiento a través de una red para garantizar que lleguen a su destino. Proporciona las funciones y los procedimientos para transferir secuencias de datos entre aplicaciones y dispositivos a trabés de las redes</li><br/>
+                        <li>Capa 3: De Transporte: La capa de transporte es responsable de proporcionar una conexión de datos sólida y confiable entre la aplicación o el dispositivo original y su destino previsto. Este es el nivel en el que los datos se dividen en paquetes y se enumeran para crear una secuencia. Luego la capa de transporte determina cuántos datos deben enviarse, a dónde deben enviarse y a qué velocidad. Garantiza que los paquetes de datos se envíen sin errores y en secuencia, y obtiene la confirmación de que el dispositivo de destino ha recibido los paquetes de datos</li><br/>
+                        <li>Capa 4: De Aplicación: La capa de aplicación se refiere a los programas que necesita <b>TCP/IP</b> para ayudarlos a comunicarse entre sí. Este es el nivel con el cual los usuarios interactúan normalmente, como sistemas de correo electrónico  y plataformas de mensajería. Combina las capas de sesión, presentación y aplicación del modelo OSI</li>
+                    </ul>
+                </div>
+            </div>
+        </div><br>
+
+        <section class="section__vulnerabilidades">
+            <h2 class="div__title">Vulnerabilidades en el protocolo TCP/IP (Modelo OSI)</h2>
+            <div class="div__content">
+                <p class="first__p">Capa 1: Físico: El ataque más efectivo además de ser el más sencillo, siempre será manipular o destruir el medio físico, como por ejemplo cortar el cable que está conectado al dispositivo que se desea atacar o desconectarlo y conectarlo a un dispositivo que no debería estar conectado a el. La dificultad principal aquí sería la parte de la ingeniería social por ejemplo si fuesemos un atacante quisieramos acceder al centro de datos de una empresa para conectar nuestro equipo directamente tendríamos que burlar la seguridad que resguarda el lugar o fingir que somos alguien que no somos en realidad, como un técnico de mantenimiento o alguien que viene a limpiar la zona. Otro ataque puede ser llevado a cabo consiguiendo un Snipher físico que se aplique de forma manual a un segmento de la red y pueda capturar el tráfico que pasa por ahí o de la misma forma conseguir un dispositivo de derivación de fibra óptica o un <b>TAP</b> de fibra óptica y capturar las señales de luz que pasan por estos cables.</p><br>
+                <p>Capa 2: Enlace de datos: Se deberá aprender sobre las direcciones <b>MAC</b> que viene del inglés "Media Access Control", son similares a las direcciones IP solo que a un nivel más abajo, además las direcciones MAC no pueden ser usadas multiples veces como algunas direcciones IP privadas, las direcciones MAC también se llaman direcciones físicas pues están vinculadas de forma única con un dispositivo singular, se dividen en 2 partes:</p>
+                <ul class="ul__vulnerabilidades">
+                    <li>El identificador único: Que es el del fabricante</li>
+                    <li>El identificador del producto</li>
+                </ul><br>
+                <p>Por ejemplo si se tienen 2 computadoras de la misma marca y modelo es muy probable que la primera parte de ambas direcciones MAC sea identica, las direcciones MAC se escriben comunmente en hexadecimal y cuando se habla de <b>"la primera parte"</b> se refiere a los 6 primeros dígitos (00-0F-66 -> Vendor Code/OUI -> 3 bytes (24 bits)) y la segunda parte sería el número serial que también contempla 3 bytes o 24 bits, entre ambos son 48 bits poco más de los 32 que contienen las direciones IPv4. En esta capa lo que se transmiten son <b>"tramas"</b> que viene a ser la información como lo puede ser un mensaje de texto, pero encapsulado con los encabezados de las capas superiores, estos encabezados son de las capas de red y transporte, además del encabezado de la capa de Enlace de datos y un trailer de esta misma capa, en esta capa para que un dispositivo pueda conocer la dirección MAC de otro dispositivo se utiliza el protocolo <b>ARP</b> o Protocolo de resolución de direcciones y es gracias a el que un dispositivo puede enviar mensajes ARP a otro y pueden entre ellos conocer sus direcciones MAC que se irán llegando en las tablas de ARP de cada dispositivo. Esto es importante, si un dispositivo solo conoce la dirección IP de destino dentro de una red, pero no conocer a que dispositivo corresponde esa dirección el procotolo ARP facilita que esa información llegue a su destino, este protocolo también es capaz de asociar a las direcciones MAC con direcciones IP una vez que identifica a que dispositivo pertenece la dirección a la que se busca llegar, a este nivel son posibles los siguientes ataques:</p>
+                <ul class="ul__vulnerabilidades">
+                    <li>MacAddress Spoofing o suplantación de dirección MAC. Un atacante reconoce cuales son las direcciones MAC de los hosts o dispositivos de red que son parte de un proceso de comunicación y pretende ser uno de estos participantes modificando la dirección MAC visible de su propio dispositivo para interceptar o cambiar el tráfico de la red a la que ahora pertenece por haber suplantado la dirección MAC del otro dispositivo, con esto el atacante podría acceder a recursos los cuales inicialmente estaba restringido para hacerlo, esto si logra hacer un Spoofing de forma exitosa.</li>
+                    <li>Este proceso anterior va de la mano con el envenenamiento de las tablas ARP para llevar a cabo ataques más sofisticados, el envenenamiento de las tablas ARP es un atacante que envía paquetes con información ARP modificada de forma maliciosa para que los dispositivos de una red anoten la información de los dispositivos vecinos y sea más fácil comunicarse con ellos pero al estar la información modificada un atacante podría hacer que los dispositivos de una red vinculen a una dirección IP con una dirección MAC errónea y así infiltrarse a una red a la que no se tenía acceso e incluso que podría estar protegida por tener información sencible y que solo ciertas personas deberían ser capaces de visualizar o modificar.</li>
+                </ul><br>
+                <p>Capa 3: Red: En esta capa se encuentra propiamente el protocolo IP o Internet Protocol gracias a la capa de red es posible que existan redes interconectadas por los protocolos y tecnologías que operan en este nivel, aquí la información sigue encapsulada pero ya no con tantos encabezados como en la capa 2 ni con el trailer que se añade en esa capa, el tipo de información que se transmite aquí son los <b>paquetes</b> *Recordar que:</p>
+                <ul class="ul__vulnerabilidades">
+                    <li>Capa 1: La información que se transmite se llama bits</li>
+                    <li>Capa 2: La información que se transmite se llama tramas</li>
+                </ul><br>
+                <p>Un paquete es la información que se quiere transmitir encapsulada con la cabecera de la capa de transporte y la cabecera de la capa de red, es en este nivel donde las estrellas del show son las direcciones IP, las direcciones IP son 4 Octetos que forman un total de 32 bits y se asignan a un dispositivo para que pueda participar en la comunicación dentro de una red con otros hosts o dispositivos de red. Algunos de los ataques que pueden ser aplicados para vulnerar la información al nivel de esta capa:</p>
+                <ul class="ul__vulnerabilidades">
+                    <li>Protocolos de enrutamiento dinámico: se configuran generalmente en dispositivos como routes que operan al nivel 3, pero si el atacante llega a tener acceso a estos dispositivos, podría cambiar las configuraciones de protocolos como RIP u OSPF para que los paquetes se compartan de forma inesperada y de acuerdo a sus intenciones como a atacante.</li>
+                    <li>Envenenamiento del caché de rutas: que guardan algunos dispositivos, pero esto es menos común y no todos los dispositivos guardan este tipo de información</li>
+                    <li>Ataque de Denegación de Servicio (DoS): generalmente para este ataque una persona con intenciones maliciosas deberá haber infectado un número considerable de equipos en primer lugar para poder generar el suficiente tráfico que colapse una red, es básicamente eso, se envía tanto tráfico a una red que colapsa y no puede procesar el número elevado de peticiones, por lo que deja de funcionar apropiadamente, este ataque no siempre es intencional. Por ejemplo si es que se abren para comprar entradas online para un concierto al que toda una ciudad quiere ir, entonces posiblemente ocurran errores en la capa de red que no fueron ocasionados por un atacante, pero ocurrieron de todas maneras, sin embargo una persona con intenciones de dar a cabo este tipo de ataques, puede infectar con malware a un número de computadoras que se convertirán en máquinas zombies o botnets y estarán a merced del atacante y las intenciones que este tenga. Es importante entender que los ataques de denegación de servicios pueden ser desplegados en otras capas, como en la capa de transporte y la capa de aplicación afectando a diferentes protocolos, el protocolo principal en el cual se basa un ataque de denegación de servicio en la capa 3 es el protocolo ICMP o Internet Control Message Protocol, en este protocolo ocurre el famoso <b>"ping"</b> que es un dispositivo diciéndole a otro "hola" y esperando a que este envíe un paquete de respuesta diciendo "Hola aquí estoy", entones si se envían tantas peticiones ICMP a un servidor de tal forma que a este se le complique responder a todo ese tráfico entonces lo paquetes empiezan a ser descartados por el nivel de congestión de la red, dando por exitoso el ataque DoS o dando por exitoso a muchas personas queriendo comprar boletos para un concierto al mismo tiempo.</li>
+                </ul><br>
+                <p>Capa 4: Ataque al transporte: el propósito de esta capa es transmitir información usando protocolos de transmisión como TCP y UDP, la unidad de información de protocolo o lo que se transmite en esta capa son los <b>"segmentos"</b> que es la información que se quiere transmitir, encapsulada con la cabecera de la capa de transporte, la diferencia entre el protocolo TCP y UDP es principalmente que el procotolo TCP es más seguro, al ser más seguro también tiende a ser más lento y por eso se usa cuando es necesario que la información se mantenga íntegra y el protocolo UDP se utiliza cuando se prefiere la velocidad de transmisión antes que la integridad de la información ya que cuando se utiliza el protocolo TCP es necesario establecer una conexión entre la fuente y el destino de la comunicación, esto hace que el protocolo sea vulnerable a ataques de denegaión de servicios. Un poco más a fondo, el protocolo TCP tiene los siguientes pasos: <br><i>SYN -> SYN ACK -> ACK</i> "SYN" significando Sincronize o sincronizar y "ACK" significando acknowledge o aceptar. <br>El primer paso o SYN es el dispositivo de origen diciéndole al dispositivo de destino "Hola aquí estoy, podemos iniciar una conversación?". <br>El segundo paso o SYN ACK es el dispositivo de destino diciendo: "Recibí tu mensaje y puedo establecer una conversación, quieres hacerlo de verdad?". <br>El tercer paso es el dispositivo de origen diciendo: "Si, está bien, hagámoslo". Y aquí es donde se establece la conexión el SYN FLOOD o inundación de sincronización es lo que ocurre en los ataques de denegación de servicio a nivel de la capa 4. En el protocolo TCP deben ocurrir 2 confirmaciones para que se establezca la conexión. Primero el SYN ACK del servidor y finalmente el ACK del cliente o dispositivo de origen. En un ataque SYN FLOOD lo que haría un atacante aquí, sería obviamente tener una cantidad significativa de máquinas a su disposición o poder generar muchísimo tráfico y enviaría muchísimas peticiones para conectarse a un servidor a través de TCP. Entonces SYN diría: "Hola, podemos establecer una conexión? y el servidor diría: "SYN ACK recibí tu mensaje, quieres en verdad establecer la conexión?. Aquí está la primera confirmación del servidor, pero lo que haría el atacante es que sus máquinas o su tráfico malicioso se queden hasta ahí, no le responderían con el ACK de confirmación final y dejarían el servidor esperando la confirmación para establecer esa conexión, por lo que se empezarían a agotar los recursos del dispositivo víctima, mientras más peticiones se vayan haciendo hasta que se congestione la red y empiecen a ocurrir errores y por eso se le llama así a este tipo de ataques SYN FLOOD o inundación de SYN porque solo se envían los SYN por el atacante pero nunca se establece una conexión con los ACK's finales dejando plantado al servidor que estaba listo para conectarse con el cliente que en este caso era un atacante.</p><br>
+                <p>Capa 5: De sesión: La función de esta capa como bien dice su nombre, establece y mantiene las sesiones o conexiones entre dos o más sistemas, lo único que se puede vulnerar y secuestrar aquí son las sesiones que se generan al establecer una conexión pero existen varias formas en las que un atacante puede acceder forzadamente o de forma indeceada a esta sesión.</p>
+                <ul class="ul__vulnerabilidades">
+                    <li>Interceptación de cookies: Ocurre cuando un atacante es capaz de acceder a estos pedazos de información que guardan los datos de la sesión de un usuario y puede usarlos para hacerse pasar por el usuario legítimo, estos pedazos de información se llaman cookies y se usan de forma extensa en la actualidad, no solo para establecer sesiones, sino para que las grandes corporaciones se roben tu información, bueno no se la roban así como así, sino que te dicen que aceptes que te van a robar y actives la cookies de tu sesión mientras navegas en algunas páginas web</li>
+                    <li>Ataque de fuerza bruta: Donde se ejecuta un programa que vaya verificando si alguno de los usuarios o contraseñas guardadas en un diccionario funcionan en un formulario de inicio de sesión.</li>
+                    <li>Cross Side Scripting: es en donde un atacante inyecto un código malicioso en un campo de texto dentro de una página web, que permite ingresar texto y no esté adecuadamente configurado de tal forma, que si un usuario llega a ejecutar el código que a sido inyectado por el atacante, pueda robar cookies del usuario legítimo u otra información como nombres de usuario y contraseñas.</li>
+                </ul><br>
+                <p>Capa 6: De Presentación: Esta capa se ocupa principalmente de traducir la información en el formato correcto y que la codificación de la información sea la correcta para cada sistema, por ejemplo si estoy enviando un mensaje desde una computadora de marca Dell que utiliza un esquema determinado de codificación hacia una computadora Mac que usa otro, entonces la capa de presentación se ocupa de hacer que ambas computadoras se puedan comunicar apropiadamente al traducir estos esquemas de codificación. Un ataque que podría explotar vulnerabilidades de la capa 6 es un ataque de cadena de formato, como se sabe, en la capa 6 se realiza una traducción de codificación o de formato en el que se presenta la información, de esta manera si un programa utiliza una función de imprimir cadenas con formato como printf en C por ejemplo, un atacante puede ingresar caracteres de contro especiales como porcentaje n (%n) porcentaje s (%s) o porcentaje x (%x) que no sean el input que el programa esperaba y si la codificación del programa no está preparada para omitir o rechazar este tipo de entrada, es posible que el programa se comporte de una forma inesperada. Ese comportamiento de forma inesperada puede variar e ir desde un desbordamiento de buffer donde se pueden leer partes del programa que no deberían ser visibles para el usuario o incluso llegar a la ejecución remota de comandos dependiendo del input que ingrese el atacante.</p><br>
+                <p>Capa 7: De Aplicación: La capa de aplicación es la que está más cerca del usuario y como dice su nombre es la que interactua de forma más directa con la persona que se encuentra usando un dispositivo, proporciona servicios de red de forma directa a las aplicaciones y usuarios. Aquí están y funcionan protocolos como <b>HTTP</b> para páginas y aplicaciones web, <b>FTP</b> para la transferencia de archivos, <b>SMTP</b> para correo electrónico o <b>DNS</b> para la resolución de nombres de dominio. Como se mencionó previamente, un ataque DoS puede ser dirigido hacia diferentes capas del sistema OSI, como se vió en la capa 3 de Red con el protocolo ICMP, un ataque en la capa 4 de transporte con el protocolo TCP y en esta capa de aplicación es posible llevar a cabo un ataque DoS haciendo uso del protocolo HTTP y los diferentes métodos que ofrece este protocolo. Hay que pensar que cuando se abre una página web o aplicación web, se está usando el protocolo HTTP de forma principal, los métodos que este protocolo contiene son comandos que hacen que el protocolo cumpla una acción en específico. Por ejemplo: si estamos leyendo un artículo en Wikipedia y hacemos clic en otro artículo que llamó nuestra atención, estaríamos usando el método <b>GET</b> que realiza una petición al servidor y generalmente nos dará una respuesta exitosa devolviéndonos el recurso que solicitamos con el método GET. Existen otros métodos como <b>POST</b> que envía datos para que el servidor los procece, <b>PUT</b> para reemplazar o colocar un recurso dentro del servidor, <b>DELETE</b> para eliminar un recurso y varios más, de cualquier forma para entender el ataque DoS de esta capa de aplicación nos vamos a quedar con el método <b>GET</b>. Un ataque DoS haciendo uso del método HTTP GET es similar en su ejecución a los ataques DoS de otras capas, una atacante puede tener una cantidad de dispositivos a su merced que pueda manipular para que envíen una cantidad gigante de peticiones GET a un servidor web y estas agoten sus recursos, es posible agotar recursos como CPU, memoria RAM o ancho de banda. Aquí algunas formas de mitigar o protegerse de estos ataques pueden ser filtrando peticiones y colocando un límite de solicitudes basándose en direcciones IP, otro ataque que puede explotar el protocolo HTTP en la capa de aplicación puede ser la inclusión local de archivos o Local File Inclusion, en este ataque un usuario malicioso puede jugar con parámetros de la aplicación web y acceder a archivos que no deberían ser visibles para este usuario. Por ejemplo, si una aplicación web utiliza una página en <b>php</b> que devuelva archivos del servidor basándose en los parámetros de la URL es posible que el atacante modifique los parámetros de esta URL para encontrar y acceder a archivos de configuración, usuario y contraseñas o archivos que de otra forma estarían ocultos, si la URL legítima de la página es: http://mipaginasegura.com/profile.php?user=pepe. Entonces un atacante podría modificar la URL y navegar a través de los directorios que se encuentran en el servidor. <br>http://mipaginasegura.com/profile.php?user=../../../../etc/passwd. En este ejemplo el atacante está retrocediendo algunos directorios dentro de la carpeta del servidor con esos "../" y si el sitio web no está configurado para proteger estas carpetas, entonces es vulnerable a este tipo de ataques, existen herramientas como <b>wfos</b> o <b>gobuster</b> que permiten enumerar los directorios de una aplicación web usando diccionarios y asi receonocer a qué archivos o directorios se podrían intentar ingresar con local file inclusion.</p>
+            </div>
+        </section>
+
+        <section class="section__listaPuertos">
+            <h2 class="div__title">Lista de puertos</h2>
+            <div class="div__content">
+                <p>Algunos de los puertos más importantes y conocidos son</p>
+                <ul>
+                    <li>HTTP: Puerto 80</li>
+                    <li>HTTPS: Puerto 443</li>
+                    <li>FTP: Puerto 21</li>
+                    <li>FTPS/SSH: Puerto 22</li>
+                    <li>POP3: Puerto 110</li>
+                    <li>POP3 SSL: Puerto 995</li>
+                    <li>IMAP: Puerto 143</li>
+                    <li>IMAP SSL: Puerto 995</li>
+                    <li>SMTP: Puerto 25 (Alternativas: puerto 26/ puerto 2525)</li>
+                    <li>SMTP SSL: Puerto 587</li>
+                    <li>MySQL: Puerto 3306</li>
+                    <li>CPanel: Puerto 2082</li>
+                    <li>CPanel SSL: Puerto 2083</li>
+                    <li>WHM (Webhost Manager): Puerto 2086</li>
+                    <li>WHM (Webhost Manager) SSL: Puerto 2087</li>
+                    <li>Webmail: Puerto 2095</li>
+                    <li>Webmail SSL: Puerto 2096</li>
+                    <li>WebDAV/WebDisk: Puerto 2077</li>
+                    <li>WebDAV/WebDisk SSL: Puerto 2078</li>
+                </ul>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <p>Felipe Vergara. Todos los derechos reservados</p>
+    </footer>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <h1>Up</h1>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

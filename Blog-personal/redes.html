@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog</title>
+</head>
+<body>
+
+    <header class="header__redes">
+        <div class="div__redes">
+            <h1>Redes</h1>
+        </div>
+    </header>
+
+    <head>
+        <div class="div__nav">
+            <nav>
+                <ul class="ul__nav">
+
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="seguridad.html">Seguridad informática</a>
+                    </li>
+                    <li>
+                        <a href="programacion.html">Programación</a>
+                    </li>
+                    <li>
+                        <a href="redes.html">Redes</a>
+                    </li>
+                    <li>
+                        <a href="linux.html">Sistema Linux</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </head>
+    
+
+    <main class="main__redes">
+
+        <h3>Apuntes de Redes</h3>
+
+        <section class="section__direccionamientoIpv4">
+            <div class="section__container-direccionamientoIpv4">
+                <h1>Direccionamiento IPv4 y sus subredes</h1>
+                <p>Una dirección IP es un número binario de 32 bits, así es como lo ven los computadores. Estos 32 bits se dividen en 4 porciones de números decimales, a los cuales se les llama <b>Octetos.</b><br>Una vez que la dirección IP se divide en bites y se transforma a deciman, tenemos lo que se llama notación decimal punteada. Esta dirección se compone de 32 bites, y dichos 32 bits están conformados por un identificador de red y un identificador de host, es decir, cierta cantidad de bites pertenecen al identificador de red y el resto de bites pertenecen al identificador de host. <br>La cantidad de bites de red y host dependerá netamente de la clase a la que pertenece dicha dirección IP.</p>
+                <h3>Clases de direcciones IPv4</h3>
+                <p>Existen 5 clases de direcciones IP:</p>
+                <ul>
+                    <li>Clase A: Suporta redes en internet grandes.</li>
+                    <li>Clase B: Suporta redes en internet moderadas.</li>
+                    <li>Clase C: Suporta redes en internet pequeñas.</li>
+                    <li>Clase D: Suporta redes Multicast.</li>
+                    <li>Clase E: Sin uso. Redes experimentales.</li>
+                </ul>
+                <p>Las clases D y E no corresponden a redes de uso cotidiano, por ende no entrarán en estudio por el momento.</p>
+                <p>Dependiendo de la clase que tenían dichas direcciones IPs era los bites determinados tanto para la red como para el host y son los siguientes:</p>
+                <ul>
+                    <li>Clase A: Los primeros 8 bites representan a la red y el restante representan al host.</li>
+                    <li>Clase B: Los primeros 16 bites representan a la red y el restante representan al host.</li>
+                    <li>Clase C: Los primeros 24 bites representan a la red y el restante representan al host.</li>
+                </ul>
+                <p>Rango de valores según su primer octeto y a que clase de red de internet corresponde:</p>
+                <ul>
+                    <li>Clase A: El primer octeto está comprendido entre: 0 - 127</li>
+                    <li>Clase B: El primer octeto está comprendido entre: 128 - 191</li>
+                    <li>Clase C: El primer octeto está comprendido entre: 192 - 223</li>
+                    <li>Clase D: El primer octeto está comprendido entre: 224 - 239</li>
+                    <li>Clase E: El primer octeto está comprendido entre: 240 - 255</li>
+                </ul>
+                <p>Ejemplos de Clase A:</p>
+                <ul>
+                    <li>10.2.2.1</li>
+                    <li>120.211.23.25</li>
+                    <li>127.1.1.1</li>
+                </ul>
+                <p>Primer octeto corresponde a la red y el restante al host <b>(8 bites de red - 24 bits de host)</b>.</p>
+                <p>Ejemplos de Clase B:</p>
+                <ul>
+                    <li>130.244.53.2</li>
+                    <li>150.185.95.2</li>
+                    <li>172.16.2.5</li>
+                </ul>
+                <p>Primer y segundo octeto corresponden a la red y el restante al host <b>(16 bites de red - 16 bits de host)</b>.</p>
+                <p>Ejemplos de Clase C:</p>
+                <ul>
+                    <li>192.168.50.4</li>
+                    <li>199.46.36.5</li>
+                    <li>200.100.210.200</li>
+                </ul>
+                <p>Primer, segundo y tercer octeto corresponden a la red y el restante al host <b>(24 bites de red - 8 bits de host)</b>.</p>
+            </div>
+        </section><br>
+
+        <section class="section__tablaIps">
+            <div class="section__container-tablaIps">
+                <table style="width: 100%;">
+                    <tr>
+                        <colgroup span="4" class="columns"></colgroup>
+                        <th class="th">Dirección Ip</th>
+                        <th>Clase</th>
+                        <th>Máscara por defecto</th>
+                        <th>Dirección de red</th>
+                    </tr>
+                    <tr>
+                        <td>199.46.36.200</td>
+                        <td>Clase C</td>
+                        <td>255.255.255.0</td>
+                        <td>199.46.36.0</td>
+                    </tr>
+                    <tr>
+                        <td>111.211.11.1</td>
+                        <td>Clase A</td>
+                        <td>255.0.0.0</td>
+                        <td>111.0.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>7.141.30.89</td>
+                        <td>Clase A</td>
+                        <td>255.0.0.0</td>
+                        <td>7.0.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>222.8.56.170</td>
+                        <td>Clase C</td>
+                        <td>255.255.255.0</td>
+                        <td>222.8.56.0</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.16.2</td>
+                        <td>Clase C</td>
+                        <td>255.255.255.0</td>
+                        <td>192.168.16.0</td>
+                    </tr>
+                    <tr>
+                        <td>63.100.5.1</td>
+                        <td>Clase A</td>
+                        <td>255.0.0.0</td>
+                        <td>63.0.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>192.0.0.2</td>
+                        <td>Clase C</td>
+                        <td>255.255.255.0</td>
+                        <td>192.0.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>130.1.1.1</td>
+                        <td>Clase B</td>
+                        <td>255.255.0.0</td>
+                        <td>130.1.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>64.55.47.100</td>
+                        <td>Clase A</td>
+                        <td>255.0.0.0</td>
+                        <td>64.0.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>10.192.168.100</td>
+                        <td>Clase A</td>
+                        <td>255.0.0.0</td>
+                        <td>10.0.0.0</td>
+                    </tr>
+                </table>
+            </div>
+        </section><br>
+
+        <section class="section__mascaraDeRed">
+            <div class="section__container-mascaraDeRed">
+                <h1>¿Qué es una máscara de red?</h1>
+                <p>Una Máscara de red es también una dirección IP. Y en ese caso tienen muchas similitudes.<br> Una de ellas es que se parecen en formato, ya que tienen 4 agrupaciones de números decimales, separados por puntos en cada número decimal.<br>Solo se diferencian en su uso, pero solo en su propósito y el uso que se le da a cada una.</p><br>
+                <h4>Una dirección IP se puede interpretar de 2 maneras.</h4>
+                <ul>
+                    <li>Notación decimal: <br>172.16.20.30</li><br>
+                    <li>Notación código binario: <br>10101100.00010000.00010100.00011110</li>
+                </ul><br>
+                <p>El código binario se traduce a numeración decimal y así es más simple (para el humano) leerlo o interpretarlo. <br>En notación decimal el alor mínimo es = 0 y el valor máximo es = 255 -> Las computadoras traducen estas cifras en 8 cifras u 8 bites y pueden ser 0's y 1's. <br>Equivalencia de números decimales en código binario es: 0 = 00000000 mientras que 255 = 11111111 -> Como se puede apreciar, siempre son 8 cifras u 8 bites y de aquí viene la palabra <b>"Octeto"</b> y como una dirección IP está formada por 4 números decimales, si cada número decimal es un octeto en número binario, se dice que una dirección está compuesta por 32 bites (4 Octetos).</p><br>
+                <h4>La máscara de red tiene 2 propósitos:</h4>
+                <ul>
+                    <li>Identificar la red o subred de la que forma parte la dirección IP a la que acompaña.</li>
+                    <li>Definir y establecer el tamaño de la red, es decir, establece el número de hosts o sistemas o computadoras que puede alvergar esta red.</li>
+                </ul><br>
+                <h4>¿Cómo se crean, como se identifican y como afectan las máscaras de red a las direcciones IP a las que acompañan?</h4>
+                <p>Una máscara de red está compuesta por 4 números decimales, separados por 1 punto entre cada uno de ellos los cuales, traducidos a código binario, corresponden a 32 bites. Por ejemplo:</p><br>
+                <ul>
+                    <li>Notación decimal (Máscara de red) <br>255.255.255.0</li>
+                    <li>Notación código binario: <br>11111111.11111111.11111111.00000000 -> 32 Bits</li>
+                </ul><br>
+                <p>El número de bites con valor "1" comenzado por la izquierda definen la <b>RED</b> o la <b>SUBRED</b> a la que pertenece la IP a la que acompañan. <br>El número de bites con valor "0" comenzando por la derecha definen el número de <b>HOSTS</b> que puede contener esa red o subred.</p><br>
+                <p>Una máscara de red <b>NUNCA</b> tendrá 0's intercalados entre 1's y viceversa, es decir, tamoco va a tener 1's intercalados entre 0's, por lo tanto, en una máscara de red válida los bites de la parte de la red identificados con 1's contando por la izquierda son consecutivos, mientras que los bites que están en 0's identifican los hosts o computadoras que pueden conectarse a esa red. Una máscara de red <b>NO</b> puede tener todos los bites en 0's ya que no podría identificarse ninguna red, en cambio, una máscara de red <b>SI</b> puede estar formada por solo 1's, si una máscara de red tiene todos los bites a 1's quiere decir que toda la dirección IP a la que acompaña está reservada a la identificación de la red (255.255.255.255) y quiere decir que la dirección IP a la que acompaña es una dirección IP de host o computadora específica, en dicho caso, se está definiendo una red muy pequeña con una sola dirección IP de hosts disponibles.</p><br>
+                <p>Ejemplo:</p>
+                <ul>
+                    <li>Dirección IP en decimal: <br>192.168.1.10</li>
+                    <li>Máscara de red en decimal: <br>255.255.255.0</li>
+                    <li>Dirección IP en código binario: <br>11000000.10101000.00000001.00001010</li>
+                    <li>Máscara de red en código binario: <br>11111111.11111111.11111111.00000000</li>
+                </ul><br>
+                <p>Otro ejemplo:</p>
+                <ul>
+                    <li>Dirección IP en decimal: <br>172.16.20.30</li>
+                    <li>Máscara de red en decimal: <br>255.255.0.0</li>
+                    <li>Dirección IP en código binario: <br>10101100.00010000.00010100.00011110</li>
+                    <li>Máscara de red en código binario: <br>11111111.11111111.00000000.00000000</li>
+                </ul><br>
+                <p>Otro ejemplo:</p>
+                <ul>
+                    <li>Dirección IP en decimal: <br>172.16.20.30</li>
+                    <li>Máscara de red en decimal: <br>255.255.0.0</li>
+                    <li>Dirección IP en código binario: <br>10101100.00010000.00010100.00011110</li>
+                    <li>Máscara de red en código binario: <br>11111111.11111111.00000000.00000000</li>
+                </ul><br>
+                <h4>¿Cómo se puede identificar la red a la que pertenece la dirección IP?</h4>
+                <p>Los bites de la máscara de red establecidos en 1 indican la parte de la dirección IP dedicada a la red</p><br>
+                <ul>
+                    <li>Dirección IP: --------->10101100.00010000.00010100.00011110</li>
+                    <li>Máscara: -------------->11111111.11111111.00000000.00000000</li>
+                    <li>Dirección de RED: ->10101100.00010000.00000000.00000000</li>
+                </ul><br>
+                <p>En el caso anterior en la máscara de red los primeros 16 bites desde la izquierda de la máscara están establecidos en 1's y para obtener la <b>DIRECCIÓN DE RED</b> de dicha dirección IP se debe multiplicar: <br>- Cada bit de la dirección IP * Cada bit de su correspondiente en la máscara de red. <br>Lo que quiere decir que en este caso, se está realizando una operación lógica <b>"AND"</b> bit a bit entre la dirección IP y la máscara de red y <b>"AND"</b> consiste simplemente en multiplicar los bites verticalmente.</p><br>
+                <p>Si estos bites 10101100.00010000.00000000.00000000 se traducen a numeración decimal se obtiene la dirección de red en decimal -> 172.16.0.0. Esta es la dirección de red a la que pertenecerá la dirección IP 172.16.20.30 con máscara de red 255.255.0.0. <br>Como los últimos 16 bites se reservan para los hosts, el rango de hosts o direcciones IP asignables a computadoras, estarían entre la dirección IP 172.16.0.1 y la 172.16.255.254 ambas incluídas, es decir que ésta máscara de red nos permite hacer uso de hasta 65.536 direcciones IP posibles, asignables a hosts, sistemas o computadoras.</p>
+            </div>
+        </section><br>
+
+        <section class="section__divisionRedes">
+            <div class="section__container-divisionRedes">
+                <h1>Subdividir redes</h1>
+                <p>Subdividir redes ayuda a segregar el tráfico y aumentar la seguridad en la red local. El proceso de subneting consiste en dividir una red local determinada en varias redes locales que se puedan utilizar de forma separada para así los dominios de broadcast de cada una de estas redes sean independientes. Esto permite separar de forma lógica las diferentes redes que tengamos en una organización o casa y por otro lado aumentar la seguridad ya que estas redes, si así se desea no podrán verse directamente entre si. <br>La máscara de subred simplemente dice cuantos bites hay disponibles para asignar IP's a hosts dentro de una red determinada. Por ejemplo 192.168.0.0/24 lo que nos dice es que de todos los bites que tiene nuestra dirección IP, solo tenemos 8 bites para utilizar, y que 24 bites ya están fijos en la subred. Es decir, los últimos 8 bites son los que podemos utilizar para asignar IP's dentro de la subred. <br> Con el ejemplo anterior nos dice que tenemos un rango de IP desde la 192.168.0.0 hasta la 192.168.0.255. Estas serían 256 IP's usables, pero en realidad solo hay 254 ya que la IP más baja; la .0 y la más alta están reservadas, la .0 para lo que sería el ID de red y la .255 es la IP del broadcast, todas las demás las podremos asignar a hosts dentro de la subred y normalmente la .1 es la que se destina al <b>Gateway</b>.</p><br>
+                <p>Ahora, para poder dividir esta red en 2 redes para por ejemplo tener una red que se destinará para uso general (conexión de computadoras, celulares, etc) y tener una segunda red que destinaremos para dispositivos domóticos, de forma que tengamos los dispositivos claramente separados en 2 subredes diferentes. Si se desea hacer esto, lo que se debe hacer es cambiar la máscara de subred para poder segregar la red. En este caso tenemos una máscara de subred: /24 que con la IP que tenemos nos permite una única subred y dentro de esta subred tenemos 256 IP's, aunque utilizables solo serían 254. <br>La siguiente tabla se resume, como modificando la máscara de subred, se va a poder dividir la subred en subredes diferentes y así mismo como el número de IP's disponibles en cada una de esas subredes va a ir disminuyendo, ya que las IP's son las mismas, simplemente que vamos a hacer la diferentes bloques con ellas de forma que, nuestra subred barra24 (/24) va a estar separada en diferentes subredes.</p>
+                <table class="tabla__divisionRedes">
+                    <colgroup span="9"></colgroup>
+                    <tr>
+                        <th>/24</th>
+                        <th>/25</th>
+                        <th>/26</th>
+                        <th>/27</th>
+                        <th>/28</th>
+                        <th>/29</th>
+                        <th>/30</th>
+                        <th>/31</th>
+                        <th>/32</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>16</td>
+                        <td>32</td>
+                        <td>64</td>
+                        <td>128</td>
+                        <td>256</td>
+                    </tr>
+                    <tr>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>64</td>
+                        <td>32</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                </table><br>
+                <p>En este caso en concreto lo que se desea hacer es separar esta red en 2, tendríamos que tomar una máscara de subred /25 que nos permitiría de esta forma tener 2 subredes y en cada una de estas subredes, podríamos tener hasta 128 IP's, en el caso por ejemplo que quisieramos dividir en vez de 2, dividirla en 3, habría que usar una /26 y lo que se tendría en este caso serían 4 subredes (nosotros solo usaríamos 3) y en cada una de estas 3 subredes, tendríamos 64 IP's y estaríamos desperdiciando 64 IP's, ya que quedaría 1 subred que no se usaría. <br>Volviendo al caso principal, al dividir la red en 2 subredes, habría que tomar el barra25 (/25) y quedaría así:</p><br>
+                <ul>
+                    <li>192.168.0.0/25</li>
+                    <li>La primera subred iría desde: <br>192.168.0.0 hasta 192.168.0.127</li>
+                    <li>La segunda subred iría desde: <br>192.168.0.128 hasta 192.168.0.255</li>
+                </ul><br>
+                <p>De esta manera, tendríamos 2 subredes y cada una de ellas con 128 IP's utilizables. <br>Comparando lo que teníamos antes en una subred vs lo que tenemos ahora en dos subredes, lo que vemos es: </p><br>
+                <ul>
+                    <h4>Para la IP 192.168.0.0/24</h4>
+                    <li>Identificador de red: --- 192.168.0.0</li>
+                    <li>Ip de broadcast: -------- 192.168.0.255</li>
+                    <li>Y tendríamos 254 IP's utilizables</li>
+                </ul><br>
+                <p>Ahora al tener 2 subredes cada una con una máscara de subred barra25 (/25). Lo que tendríamos es: </p><br>
+                <ul>
+                    <h4>Una primera subred 192.168.0.0/25</h4>
+                    <li>Identificador de red: --- 192.168.0.0</li>
+                    <li>Ip de broadcast: -------- 192.168.0.127</li>
+                    <li>Y tendríamos 126 IP's utilizables</li>
+                </ul><br>
+                <ul>
+                    <h4>Una primera subred 192.168.0.0/25</h4>
+                    <li>Identificador de red: --- 192.168.0.128</li>
+                    <li>Ip de broadcast: -------- 192.168.0.255</li>
+                    <li>Y tendríamos 126 IP's utilizables</li>
+                </ul><br>
+                <p>En total tendríamos 252 IP's utilizables en comparación con las 254 IP's útiles si mantuviésemos una única subred /24, ya que, como vemos ahora, vamos a necesitar una IP a mayores para identificador de red de una de las subredes y una IP a mayores para ip de broadcast de la otra subred. <br>El proceso de subneting es sencillo, solo hay que tener claro como afectan las máscaras de subred a como vamos a poder dividir la red y cuales son las IP's: La primera y la última IP del rango que son las IP's que van a actuar como identificador de red e IP de broadcast que las restaremos del rango útil, nos dará el rango total de IP's útilies y de esa forma tendremos cuantas IP's podemos utilizar y si encaja eso en la arquetectura de red que nosotros queremos montar, si necesitamos dividir nuestra subred principal en un número diferentes de subredes lo único que hay que hacer es que máscara de subred nos divide la red en el número de subredes suficientes para la división que se necesite o se desea realizar y ver si el número de IP's disponibles en esas subredes es suficiente para acomodar el número de hosts que se desea asignar a cada una de esas subredes, en el caso de que no sea así lo que tendríamos que hace es cambiar nuestra IP principal a una IP que tenga una máscara de subred menor que permita dividir en subredes más grande de forma que se pueda acomodar de esta forma el número de hosts.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Felipe Vergara. Todos los derechos reservados</p>
+    </footer>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <h1>Up</h1>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

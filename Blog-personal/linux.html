@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header class="header__linux">
+        <div class="div__linux">
+            <h1>Sistema Linux</h1>
+        </div>
+    </header>
+
+    <head>
+        <div class="div__nav">
+            <nav>
+                <ul class="ul__nav">
+
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="seguridad.html">Seguridad informática</a>
+                    </li>
+                    <li>
+                        <a href="programacion.html">Programación</a>
+                    </li>
+                    <li>
+                        <a href="redes.html">Redes</a>
+                    </li>
+                    <li>
+                        <a href="linux.html">Sistema Linux</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </head>
+
+    <main class="main__linux">
+
+        <h3>Apuntes de Redes</h3>
+
+        <div class="div__container-shells">
+
+            <div class="div__container-tipos-shells">
+                <h1>Tipos de Shells</h1>
+                <h2 class="div__title-shell">sh</h2>
+                <p>sh: Es el acrónico de <b>sh</b>ell, esta es la shell más básica que viene por defecto en la mayoría de distros de GNU/Linux, no es tan dinámica ni tan usada</p>
+            </div>
+
+            <div class="div__container-tipos-shells">
+                <h2 class="div__title-shell">bash</h2>
+                <p>bash: <b>b</b>ourne <b>a</b>gain <b>sh</b>ell, el bash es la versión mejorada de sh, añade características como comandos propios y más comodidades de uso, es más dinámico que sh, también aparece en la gran mayoría de las distros, además se puede usar como lenguaje de programación, ya que contiene variables, bucles, constantes, condicionales y demás, que en ciberseguridad es muy útil y se conoce como <b>"bash scripting"</b></p>
+            </div>
+
+            <div class="div__container-tipos-shells">
+                <h2 class="div__title-shell">zsh</h2>
+                <p>zsh: Recoge características de diferentes shells, ofrece un uso más interactivo que bash</p>
+            </div>
+
+        </div>
+
+        <section class="section__prompt">
+            <div class="section__container-prompt">
+                <h1>Prompts</h1>
+                <h4>Composición básica de un prompt:</h4><br/>
+                <h5>usuario@host:/ruta/actual$</h5>
+                <ul>
+                    <li>usuario: es el nombre del usuario que está usando el equipo</li>
+                    <li>@: Separador del usuario y del host</li>
+                    <li>host: Nombre de la máquina</li>
+                    <li>~: Ruta en la que se encuentra actualmente</li>
+                    <li>$: Usuario con permisos normales</li>
+                    <li>#: Usuario <b>"root"</b> o con permisos de administrador</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section__ficheros">
+            <div class="section__container-ficheros">
+                <h1>Ficheros más importantes en Linux</h1>
+                <ul>
+                    <li>/ect/passwd: Contiene información sobre los usuarios del sistema que incluye nombres de usuarios, ID del usuario, ID del grupo, información del usuario, directorio home y la shell del usuario</li>
+                    <li>/etc/group: Contiene información sobre los grupos del sistema incluyendo el nombre del grupo y los miembros del grupo</li>
+                    <li>/etc/shadow: Almacena las contraseñas de los usuarios en formato encriptado, las contraseñas de acceso al sistema, a este fichero solo puede ingresar el usuario <b>root</b> y se organiza de la siguiente manera: username:encrypted_password:last_change:min:max:warn:inactive:expire:reserved</li>
+                    <li>/etc/fstab: Aquí se definen cómo y donde se montan los sistemas de archivos ya que principalmente contiene información sobre las particiones que están hechas a nivel de sistema</li>
+                    <li>/etc/network/interfaces: Se define la confirguración de red para las interfaces de red del sistema, esto funciona en la gran mayoría de las distros pero algunas usan "netplan"</li>
+                    <li>/etc/hostname: Contiene el nombre del host del sistema y por consecuenca se puede cambiar el nombre del host modificando el contenido de este fichero</li>
+                    <li>/etc/resolv.conf: Aquí se definen los servidores DNS que el sistema va a utilizar para hacer las traducciones de los nombres de dominio</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section__directorios">
+            <div class="section__container-directorios">
+                <h1>Directorios principales en sistemas GNU/Linux</h1>
+                <ul>
+                    <li>/boot/: Este directorio contiene los ficheros necesarios para el arranque del sistema incluyendo el Kernel y el init runs<./li>
+                    <li>/etc/: Ente directorio contiene los ficheros de configuración del sistema y de las aplicaciones, tanto las que vienen por defecto como las que se vayan instalando.</li>
+                    <li>/var/: Este directorio contiene los ficheros de datos de variables como los registros del sistema y las bases de datos.</li>
+                    <li>/usr/: Este directorio contiene los ficheros(y también subdirectorios) compartidos con todos los usuarios incluyendo las aplicaciones y las librerías. Dentro de este directorio, a su vez se encuentran otros subdirectorios de interés que son:</li><br/>
+                    <ul class="ul__directorios">
+                        <li>/usr/bin/: Aquí se encuentran los ejecutables donde pueden estar los comandos que se pueden ejecutar a futuro.</li>
+                        <li>/usr/lib/: Aquí se encuentran las librerías que son necesarias para la correcta ejecución de determinados comandos, aplicaciones o softwares en general instalados en el sistema.</li>
+                    </ul><br/>
+                    <li>/home: Este directocio almacena varios subdirectorios y subdirectorios personales de los usuarios creados dentro del sistema, por ejemplo. Si se tiene un usuario llamado Felipe, dentro del directorio /home, habrá un directorio llamado Felipe donde se encontrarán a su vez todos los ficheros personales, subdirectorios y configuraciones de la sesión del usuario.</li>
+                    <li>/root: Este es el directorio home del usuario root donde el usuario administrador almacena los ficheros temporales, configuraciones y subdirectorios.</li>
+                    <li>/temp: En este directorio se almacenan los ficheros temporales que son necesarios durante la instalación de nuevas aplicaciones o la ejecución de scripts, la mayoría de ficheros que son almacenados en este directorio, cuando se reinicia o apaga el sistema, se eliminan.</li>
+                    <li>/dev: Este directorio contiene ficheros especiales que representan dispositivos de Hardware.</li>
+                    <li>/sbin: Aquí se almacenan todos los ejecutables escenciales para el arranque del sistema y su recuperación.</li>
+                </ul>
+                <h2>Directorios especiales dentro de Linux</h2>
+                <ul>
+                    <li>/proc/: Se verá información sobre los procesos en ejecución, adicionalmente del Hardware del sistema e información básica del sistema</li>
+                    <li>/sys/: Es una estructura de directorios que representa el Hardware del sistema y este directorio es el más especial de todos porque es directamente una interfaz entre el Kernel y el usuario, pero de forma mucho más directa</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section__variables">
+            <div class="section__container-variables">
+                <h1>Variables de entorno en Linux</h1>
+                <p>- Las variables de entorno en Linux son un conjunto de valores dinámicos que afectan directamente a la forma en que se ejecutan los procesos dentro del sistema. Las variables de entorno en Linux son usadas principalmente por las aplicaciones para obtener información sobre el entorno del sistema, estas variables se pueden ver utilizando el comando <b>"env"</b>. Cuanto este comando se ejecuta, mostrará una lista con todas las variables de entorno y los valores asignados que tienen y también se pueden ver de manera individual haciendo uso del comando <b>"echo"</b> y usando el símbolo <b>"$"</b> seguido del nombre de la variable. Por ejemplo si queremos ver el valor de la variable <b>Home</b> se usa la siguiente expresión:</p><br>
+                <p><i>echo $Home</i> y el resultado sería: <b>/home/Felipe</b></p><br>
+                <p>Si se desea definir una variable nueva, hay que usar el comando <b>"export"</b>, por ejemplo:</p><br>
+                <p><i>export casa=roja</i>: Esto va a definir una variable llamada <b>"casa"</b> cuyo valor será <b>"roja"</b>. Para modificar variables de entorno se puede hacer con el comando <b>"export"</b>. Por ejemplo:</p><br>
+                <p><i>export casa=azul</i>: Esto lo que hace es modificar el valor de la variable original de <b>"roja"</b> a <b>"azul"</b></p><br>
+                <p>También si se desea conservar el valor actual de la variable pero agregarle otro valor adicional, se puede usar el mismo <b>export</b> pero de la siguiente manera:</p><br>
+                <p><i>export casa=$casa:roja</i>: La acción anterior entregará lo siguiente: <b>casa=<azul:roja></azul:roja></b></p>
+                <p>Ahora para eliminar esta variable del sistema, se usa el comando <b>"unset"</b>. Por ejemplo:</p><br>
+                <p><i>unset casa</i>: En esta acción la variable queda eliminada</p><br>
+                <h2>Variables de entorno que vienen por defecto</h2>
+                <ul>
+                    <li>Path: Especifica las rutas en el que el sistema busca los ejecutables como pueden ser comandos o binarios.</li>
+                    <li>Home: Especifica el directorio <b>home</b> del usuario, dependiendo el usuario que estpe usando el sistema, es el resultado que arrojará.</li>
+                    <li>User: Nos especifica el nombre del usuario actual.</li>
+                    <li>Shell: Nos especifica el Shell actual en uso.</li>
+                    <li>Term: Nos especifica el termina actual en uso.</li>
+                    <li>Editor: Nos especifica el editor de texto predeterminado.</li>
+                    <li>Lang: Nos especifica la confirguración de idioma y localización.</li>
+                </ul><br>
+                <h2>Comandos de ayuda y soporte</h2>
+                <p>man: Viene del acrónico de <b>man</b>ual y es la primera línea de ayuda para entender como funcionan otros comandos. Por ejemplo</p>
+                <ul class="ul__principal">
+                    <li>man ls: Dará información de qué hace el comando <b>ls</b>(list)</li>
+                </ul>
+                <p>info: info es similar al comando man, pero en formato diferente, ya que brindará información mucho más detallada de los comandos</p>
+                <ul class="ul__principal">
+                    <li>info ls: Dará información más potente de qué es lo que hace <b>ls</b></li>
+                </ul>
+                <p>whatis: Provee de una descripción breve del comando en cuestión que se quiera consultar</p>
+                <ul class="ul__principal">
+                    <li>whatis ls: Dará una breve descripción de lo que hace <b>ls</b></li>
+                </ul>
+                <p>apropos: Este comando ayudará a encontrar comandos relacionados con una palabra clave. Por ejemplo:</p>
+                <ul class="ul__principal">
+                    <li>apropos directory: Este comando entregará una lista de comandos relacionados con esa palabra clave; es como un buscador. Usar apropos es como usar <b>man -k</b>.</li>
+                </ul>
+                <p>whereis: Este comando principalmente localizará el archivo binario y la página del manual de un comando. Por ejemplo:</p>
+                <ul class="ul__principal">
+                    <li>whereis ls: Esto entregará:</li>
+                    <ul class="ul__comandos">
+                        <li>ls: /usr/bin/ls  /usr/share/man/man1/ls1.gz</li>
+                    </ul>
+                </ul>
+                <p>which: Mostrará la ruta del archivo ejecutable asociado o un comando. Es decir, el fichero que se ejecuta cuando se pone la palabra clave del comando. Por ejemplo</p>
+                <ul class="ul__principal">
+                    <li>which ls: Mostrará la ruta del binario; es decir: <b>/usr/bin/ls</b> y este es el fichero que contiene las instrucciones que se van a ejecutar cuando se llama al comando ls desde un emulador de terminal usando la shell</li>
+                </ul>
+                <p>La mayoría de comandos de Linux proporcionan un parámetro que puede ser: <b>-h</b> o <b>--help</b>. Por ejemplo:</p>
+                <ul class="ul__principal">
+                    <li>ls --help: Este dará la "ayuda" de este comando en específico, es decir le estamos pidiendo al mismo comando que se ejecuta, información sobre el mismo.</li>
+                </ul>
+            </div>
+        </section><br>
+
+        <section class="section__rutasAbsolutas">
+            <div class="section__container-rutasAbsolutas">
+                <h1>Rutas absolutas y relativas</h1>
+                <p>Ruta absoluta: Es una dirección en relación a la raíz del sistema, del sistema de archivos de Linux(Todo comienza desde la <b>"/")</b>. Por ejemplo</p><br>
+                <p>ls -l felipe_absoluto.txt:</p>
+                <p>Lo anterior arrojará: <br><b>-rw-r--r-- 1 felipe felipe 27nov 24 20:41 felipe_absoluto.tst</b></p><br>
+                <p>La ruta sería la siguiente: <b>cat /home/felipe/felipe_absoluto.txt</b> (El comando cat permite visualizar el contenido de un archivo entero en pantalla, cat es el diminutivo de concatenate)</p><br>
+                <p>Ruta relativa: Nunca comienza por la barra, siempre empieza en el directorio donde nos encontramos. Si quisieramos volver a leer la escritura o el archivo o contenido del .txt y nos encontráramos actualmente en <b>"opt"</b> se debe volver a poner cat pero con la diferencia de agregar <b>".."</b> (Los puntos seguidos abajo, quieren decir que se desea ir un directorio más atrás y ahí recién escribir la ruta completa), quedaría así: <br><i>/opt$ cat ../home/felipe/felipe_absoluto.txt</i></p>
+            </div>
+        </section><br>
+
+        <section class="section__comandosNavegacion">
+            <div class="section__container-comandosNavegacion">
+                <h1>Comandos de navegación, gestión de ficheros y directorios</h1>
+                <h2>Comandos más esenciales</h2><br>
+                <ul>
+                    <li>cd (change directory): Funciona para cambiar el directorio actual, xd recibe tanto rutas relativas como rutas absolutas</li>
+                    <li>pwd (print working directory): Imprime el directorio actual en el que se encuentra situado el usuario</li>
+                    <li>ls (acrónimo de list): Lista los ficheros y directorios o ver el contenido de los mismos. El comando ls cuenta con muchos parámetros, pero los más usados y recurrentes son:</li>
+                    <ul>
+                        <li class="li__comandosNavegacion">-a: Muestra todos los ficheros y directorios, también los ocutos.</li>
+                        <li class="li__comandosNavegacion">-l: Muestra un output de la lista pero mucho más detallado</li>
+                    </ul>
+                </ul>
+            </div><br>
+
+            <div class="section__container-comandosNavegacion">
+                <h1>Significado de cada campo cuando se usa <b>"ls -l"</b></h1>
+                <h3>Ejemplo: <br>-rw-r--r--(1) 1(2) root(3) root(4) 1523(5) may(6) 31(7) 2022(8) usb_modeswitch.conf(9)</h3>
+                <ul>
+                    <li><h4>1: Se muestran los permisos del fichero, directorio o enlace</h4></li>
+                    <li><h4>2: Número de enlaces que tendrá dicho activo</h4></li>
+                    <li><h4>3: El propietario del fichero, directorio o enlace</h4></li>
+                    <li><h4>4: EL grupo de fichero, directorio o enlace</h4></li>
+                    <li><h4>5: Tamaño que pesa el fichero, directorio o enlace representado en bytes (Se puede modificar con el parmámetro "-h"</h4></li>
+                    <li><h4>6: Mes donde se hizo la última modificación</h4></li>
+                    <li><h4>7: Día donde se hizo la última modificación</h4></li>
+                    <li><h4>8: Año o hora donde se hizo la última modificación</h4></li>
+                    <li><h4>9: Nombre del fichero, directorio o enlace en cuestión</h4></li>
+                </ul>
+            </div>
+        </section><br>
+
+        <section class="section__gestionFicheros">
+            <div class="section__container-gestionFicheros">
+                <h1>Comandos de gestión de ficheros</h1>
+                <p>touch: Se usa para crear ficheros vacíos. El comando touch también viene con parámetros de utilidad y vienen orientados al tema de gestión de ficheros ya existentes. Estos son los siguientes:</p>
+                <ul>
+                    <li>-a: Cambia la hora de acceso al fichero</li>
+                    <li>-m: Cambia la fecha de modificación</li>
+                    <li>cp: Es el acrónimo de <b>"copy"</b> y permite copiar tanto ficheros como directorios dentro del sistema, la sintaxis sería la siguiente: <br><i>cp (ruta_origen) (ruta_destino)</i>. Puede aplicar tanto para el directorio actual de trabajo, como para rutas absolutas y relativas. Para el ejemplo anterior sería: <br> <i>cp felipe.txt Descargas/felipe.txt</i>. El ejemplo anterior copia el fichero de su carpeta actual y lo pega en la carpeta de "Descargas". <br>Dicho comando también cuenta con algunos parámetros y son:</li>
+                    <ul class="ul__section-container__gestionFicheros">
+                        <li>-i: Fuerza a solicitar una confirmación antes de sobreescribir, porque puede ser que en el destino de pegado existe otro archivo con el mismo nombre</li>
+                        <li>-r: Copia directorios de manera recursiva, es decir que si hay un directorio que a su vez tiene más directorios dentro de el, se necesitará del parámetro <i>-r</i> para poder copiar toda la estructura de directorios.</li>
+                    </ul>
+                    <li>mv: Es el acrónimo de move y sirve para mover o renombrar o mover y renombrar ficheros o directorios, la sintaxis sería la siguiente: <br><i>mv (ruta_origen) (ruta_destino)</i> o si por ejemplo se desea mover y además renombrar, sería así: <br><i>mv (ruta_origen_vieja) (ruta_origen_nueva)</i>. O un ejemplo más práctico sería: <br><i>mv felipe.txt Descargas/feli.txt</i> -> Aquí se mueve el fichero desde su directorio original al directorio Descargas con el nombre cambiado. <br>Move también cuenta con parámetros propios. Agunos son</li>
+                    <ul class="ul__section-container__gestionFicheros">
+                        <li>-i: Para solicitar confirmación</li>
+                        <li>-u: Que solamente va a sobreescribir el activo si el activo de destino es más antiguo</li>
+                    </ul>
+                    <li>rm: Es el acrónimo de <b>"remove"</b>, el comando sirve para eliminar ficheros y directorios y su sintaxis sería: <br> <i>rm (activo_a_eliminar)</i>. También admite tanto rutas relativas como absolutas y contiene parámetros, algunos son:</li>
+                    <ul class="ul__section-container__gestionFicheros">
+                        <li>-i: Para pedir confirmación de si realmente se desea eliminar dicho activo, se usa particularmente en scripts.</li>
+                        <li>-r: También hace alución a recurcividad y principalmente se usa para directorios, ya que si se quiere eliminar un directorio y dentro de el hay más directorios; con el parámetro <b>-r</b> y el nombre del directorio se eliminan el directorio principal junto con todo lo que tiene dentro, dicho parámetro es obligatorio para directorios, estén llenos o vacíos. Adiciolamente <b>-r</b> puede usarse con <b>f (-rf)</b> para forzar la eliminación</li>
+                    </ul>
+                </ul>
+            </div>
+        </section><br>
+
+        <section class="section__gestionDirectorios">
+            <div class="section__container-gestionDirectorios">
+                <h1>Comandos de gestión de directorios</h1>
+                <p>El comando en cuestión es <b>"mkdir"</b> y es el acrónimo de make directory (crear directorio) y la sintaxis sería: <br> <i>mkdir (ruta_al_nuevo_directorio)</i>. Un par de ejemplos de lo anterior sería:</p>
+                <ul>
+                    <li>Con ruta absoluta: <i>mkdir /tmp/felipe</i></li>
+                    <li>Con ruta relativa: <i>mkdir Musica/felipe</i></li>
+                </ul>
+                <p>Al igual que los demás comandos, mkdir cuenta con diversos parámetros. Algunos de ellos son:</p>
+                <ul>
+                    <li>-p: Sirve para crear directorios padre, es decir, permite crear estructuras de directorios un poco más complejos. Por ejemplo. Si se quiere crear dentro de "Música" el directorio "felipe" y que dentro de este se encuentre el directorio "feli" y dentro de este, el directorio "33". Se pueden hacer 2 cosas:</li>
+                    <ul class="ul__section-container__gestionDirectorios">
+                        <li>1): Se puede ejecutar el comando mkdir 3 veces, e ir creando cada directorio de forma individual</li>
+                        <li>2): Usar el comando <i>mkdir -p</i>, cuya sintaxis sería la siguiente: <br> <b>mkdir -p Musica/felipe/feli/33</b></li>
+                    </ul>
+                </ul><br>
+                <p>rmdir: Es el acrónimo de <b>"remove directory"</b> y este sirve para eliminar un directorio (no fichero). Solo elimina directorios vacíos, para eliminar directorios que no estén vacíos se usa el parámetro: <i>--ignore-fail-on-non-empty</i> que ignora los fallos cuando se desea eliminar directorios con contenido, pero solo ignora fallos</p>
+            </div>
+        </section><br>
+
+        <section class="section__comandosVisualizacion">
+            <div class="section__container-comandosVisualizacion">
+                <h1>Comando de visualización de ficheros</h1>
+                <p>cat: Es el acrónimo de <b>concatenate</b> y originalmente este comando se diseñó para concatener y mostrar el contenido de ficheros, pero actualmente se le poco uso a esta acción, ya que principalmente se usa para leet ficheros dentro de la terminal y su sintaxis es: <br> <i>cat (ruta_al_fichero)</i>. Esta ruta puede ser absoluta o relativa</p><br>
+                <p>Ejemplos de concatenar ficheros: <br> <i>cat (ruta_al_fichero_1) (ruta_al_fichero_2) > (ruta_fichero_1+2)</i></p><br>
+                <p>En palabras más simples sería: cat (ruta_al_fichero_1) (ruta_al_fichero_2) y seguidamente se emula el fichero para la ruta resultante (ruta_fichero_1+2). <br> <i>cat felipe1.txt felipe2.txt > felipe_total.txt</i>. <br>Es decir: lo que hará cat en este caso es: leer el fichero 1 y lo va a unir al contenido del fichero 2 cuyo contenido se va a redirigir al fichero número 3 dando un fichero que alojará el contenido de los 2 ficheros. Adicionalmente cat cuanta con parámetros que se pueden usar y estos son:</p>
+                <ul>
+                    <li>-n: Sirve para contar el N° de líneas mientras se lee un fichero.</li>
+                    <li>head: Muestra las primeras líneas de un fichero (las primeras 10) se puede combinar con <b>-n</b> (y un número para así mostrar la cantidad de líneas que se necesite).</li>
+                    <li>tail: Lee el fichero pero desde las últimas 10 líneas del fichero, también se puede usar con <b>-n</b> con el mismo propósito.</li>
+                    <li>-f: Sigue el contenido en tiempo real de un fichero, esto es útil cuando se están supervisando logs, ya que los logs se van almacenando en las últimas líneas.</li>
+                    <li>less: Muestra el contenido de un fichero en forma paginada, es decir, que muestra el contenido del fichero página a página, es útil cuando el fichero es muy extenso.</li>
+                </ul>
+            </div>
+        </section><br>
+
+        <section class="section__sistemasPuts">
+            <div class="section__container-sistemasPuts">
+                <h1>Comprendiendo el Stdin, Stdout, Stderr</h1>
+                <p>Standard Input (Stdin): Es el medio a través del cual los comandos y datos son recibidos por un programa, el más cotidiano ejemplo es el teclado del computador, ya que a partir de ahí se le van a introducir los datos que va a recibir algún comando o la información necesaria para que el sistema realice la acción que se desea represntar. <b>Stdin se representa con el número "0".</b></p><br>
+                <p>Standard Output (Stdout): Este es el medio por el cual un programa enviará datos de salida al usuario o a otro programa (comandos), por defecto el Stdout está asociado al emulador de terminal ya que es por ahí donde se verán los datos que devuelve un comando. <b>Stdout se representa con el número "1".</b></p><br>
+                <p>Standard Error (Stderr): Es el utilizado por el sistema para enviar mensajes de error o de diagnóstico, al igual que el Stdout, también estpa asociado al emulador de terminal, ya que por ahí es por donde se mostrarán los mensajes de error o diagnóstico cuando se ejecute algún comando erróneo (o no). <b>Stderr se representa con el número "2".</b><br>Estos 3 son descriptores de archivos en sistemas Unx y Linux, qe representan la entrada de datos, la salida de datos y la salida de erroes y son descriptores que están presentes en todos los comandos que se lleguen a ejecutar.</p><br>
+                <h2>Qué es un descriptor de archivos?</h2><br>
+                <p>Básicamente son números que representan recursos en entrada y salida a nivel de Unix y Linux, los 3 descriptores <b>(0 - 1 - 2)</b> están abiertos por defecto para cada proceso que se ejecuta en el sistema operativo y estos descriptores de archivos también pueden ser manipulables al antojo del usuario y de esta forma redirigir la entrada, salida y salida de errores a diferentes destinos y así tener más control de los comandos que se están ejecutando y sobre todo del comportamiento que se genere una vez ejecutados.</p>
+            </div>
+        </section>
+
+        <section class="section__gestionUsuarios">
+            <div class="section__container-gestionUsuarios">
+                <h1>Comandos de gestión de usuarios</h1>
+                <p>Dentro de Linux existen muchos comandos para la gestión de usuarios, pero los más usados con los siguientes:</p><br>
+                <ul>
+                    <li>useradd: Sirve para añadir nuevos usuarios, pero es un comando muy poco personalizable</li>
+                    <li>userdel: Sirve para eliminar un usuario ya existente, pero es un comando muy poco personalizable</li>
+                </ul><br>
+                <p>Hay comandos que son más personalizables que los anteriores ya mencionados y más óptimos, además hacen que la interacción sea mucho más fácil a nivel usuario, por consecuencia ahorran más tiempo. Son los siguientes:</p><br>
+                <ul>
+                    <li>adduser: Crea nuevos usuarios en el sistema. Lo que hace este comando es añadir al usuario al fichero <b>/etc, /passwd</b> y cada uno de los datos que se ingresan son datos que nosotros (como admin) podemos asignar, este comando debe ejecutarse con el comando <b>sudo</b>. Y la sintaxis sería: <br> <i>sudo adduser felipe</i><br> Para corroborar la creación del usuario se hará un: <br><i>tail -n1 /etc/passwd</i></li>
+                    <li>deluser: Sirve para eliminar un usuario en el sistema, para la sintaxis es algo similar ya que hay que anteponer el comando <b>sudo</b> (ya que solo un admin puede eliminar usuarios): <br><i>sudo deluser --remove-home felipe</i> *El comando <i>--remove-home</i> permite que además de eliminar el usuario, elimina a su vez el directorio home asociado a el</li>
+                    <li>usermod: Es un comando que permite modificar propiedades de un usuario existente, como el nombre de usuario, su directorio home o el grupo al cual pertenece y la sintaxis sería: <br><i>sudo usermod -l messirve -d /home/messirve felipe</i></li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <h4>Explicación de los parármetros usados en <i>usermod</i></h4>
+                        <li>-l: Permite cambiar el nombre del login y se le indica el nuevo nombre</li>
+                        <li>-d: indica el nuevo directorio</li>
+                        <li>felipe: Es sobre quién se harán los cambios</li>
+                    </ul>
+                    <li>passwd: Es utilizado para cambiar la contraseña de un usuario y alguno de sus parámetros son los siguientes:</li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <li>-l: Bloquea la contraseña del usuario, básicamente desactiva la cuenta</li>
+                        <li>-u: Desbloquea la contraseña del usuario, reactiva la cuenta</li><br>
+                        <p>Para cambiar la contraseña, basta con estar situados en el usuario que deseamos cambiar la contraseña y digitar <b>"passdw"</b></p><br>
+                    </ul>
+                    <li>id: Acrónimo de identification y permite identificar la información del usuario actual o del que se le indique y también cuenta con parámetros, algunos de ellos son:</li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <li>-u: Muestra el UID: User ID -> Es el ID único asignado a ese usuario en el sistema</li>
+                        <li>-g: Muestra el GID: Group ID -> El ID pero en este caso del grupo</li>
+                    </ul>
+                    <li>who: Permite conocer quien está conectado al sistema y también cuenta con parámetros. Uno de ellos es:</li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <li>-u: Muestra los usuarios conectados junto a la hora en que se conectaron</li>
+                    </ul>
+                    <li>su: Es el acrónimo de switch user y permite cambiar de usuario, si no se especifica un nombre de usuario, siempre cambiará al usuario <b>root</b> y también tiene algunos parámetros. Y son los siguientes:</li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <li>-l o --login: Que proporciona un entorno similar al que tendría el usuario si se conectara</li>
+                        <li>-c: Que permite ejecutar un comando con el usuario que le indiquemos (con los permisos de ese usuario) sin tener que loggear con ese usuario precisamente</li>
+                    </ul>
+                    <li>sudo: Permite ejecutar comandos con privilegios de otro usuario, la diferencia con <b>su</b> es que con <b>su</b> es CAMBIAR SESIÓN y <b>sudo</b> es EJECUTAR COMANDOS como otro usuario. Cuenta con parámetros y algunos de ellos son:</li>
+                    <ul class="ul__container-gestionUsuarios">
+                        <li>-u: Especifica el usuario con el que se ejecutará un comando</li>
+                        <li>-i: Proporciona un entorno similar al que tendría un usuario si se conectara (es decir, proporciona un shell con el usuario que se desea)</li>
+                    </ul><br>
+                    <p>Al igual que con el comando <b>su</b>, si no se le indica un usuario, este tomará por defecto el usuario <b>root</b>. Muchas personas usan <b>sudo su</b> sin saber lo que significa y solo ven que proporciona un shell como usuario <b>root</b> y esto pasa por lo siguiente: <br>Si se ejecuta el comando sudo y no le indicamos un usuario, por defecto toma el usuario <b>root</b>. Por consecuencia; sudo a secas es como: "Ejecuta el siguiente comando como root". Y el siguiente comando cual será? Pues <b>su</b> para cambiar de sesión y como se recordará, si a su no se le indica un usuario, por defecto tomará el root, es idecir. Con <b>sudo su</b> le decimos lo siguiente al sistema: "Ejecuta como root un cambio de sesión al usuario root. Por consecuenca si nuestro usuario tiene permisos a nivel de <b>sudoers</b>, podemos tener una shell como usuario root, pero <b>sudo su</b> no es la única forma de tener una shell como root, se puede hacer con el parámetro <i>-i o sudo -s</i> en ambos casos (-i y -s) proporciona una shell del usuario que le pedimos, pero, si no especificamos ningún usuario, por defecto nos toma el usuario root</p><br>
+                    <li>whoam: Este nombre viene del juego de palabras "WhoIAm", imprime por pantalla el nombre del usuario asociado al userID actual en la terminal, es decir, te dice el nombre del usuario con el cual estás loggeado</li>
+                    <li>finger: Viene de la idea de "Señalar" y básicamente proporciona información de un usuario en particular, la última vez que inició sesión y otros detalles</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Felipe Vergara. Todos los derechos reservados</p>
+    </footer>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <h1>Up</h1>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
